@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="container nav-content">
+        <a href="index.html" class="logo"><img src="./images/IMDB logo.png" alt="IMDb Logo"></a>
+        <div class="search-container">
+    <form id="searchForm" class="search-box ">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search IMDb"
+            autocomplete="off"
+        >
+
+        <button type="submit">
+           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0,0,256,256">
+                    <g fill="#797979" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M9,2c-3.85415,0 -7,3.14585 -7,7c0,3.85415 3.14585,7 7,7c1.748,0 3.34501,-0.65198 4.57422,-1.71875l0.42578,0.42578v1.29297l5.58594,5.58594c0.552,0.552 1.448,0.552 2,0c0.552,-0.552 0.552,-1.448 0,-2l-5.58594,-5.58594h-1.29297l-0.42578,-0.42578c1.06677,-1.22921 1.71875,-2.82622 1.71875,-4.57422c0,-3.85415 -3.14585,-7 -7,-7zM9,4c2.77327,0 5,2.22673 5,5c0,2.77327 -2.22673,5 -5,5c-2.77327,0 -5,-2.22673 -5,-5c0,-2.77327 2.22673,-5 5,-5z"></path></g></g>
+                    </svg>
+        </button>
+    </form>
+
+    <div
+        id="searchSuggestions"
+        class="search-suggestions hidden"
+    ></div>
+</div>
+        <nav>
+           
+           <section class="filters container">
+
+            <div class="genre-dropdown">
+        
+                <button
+                    type="button"
+                    class="genre-button"
+                    id="genreButton" >
+                    <span>Genres</span>
+        
+                    <span
+                        class="genre-arrow"
+                        id="genreArrow" >
+                        ▼
+                    </span>
+                </button>
+        
+                <div
+                    class="genre-menu"
+                    id="genreMenu"  >
+        
+                    <button type="button" class="genre-option" data-genre="Action">
+                        Action
+                    </button>
+        
+                    <button type="button" class="genre-option" data-genre="Adventure">
+                        Adventure
+                    </button>
+        
+                    <button type="button" class="genre-option" data-genre="Animation">
+                        Animation
+                    </button>
+        
+                    <button type="button" class="genre-option" data-genre="Biography">
+                        Biography
+                    </button>
+        
+                    <button type="button" class="genre-option" data-genre="Comedy">
+                        Comedy
+                    </button>
+        
+                    <button type="button" class="genre-option" data-genre="Crime">
+                        Crime
+                    </button>
+        
+                    <button type="button" class="genre-option" data-genre="Drama">
+                        Drama
+                    </button>
+        
+                    <button type="button" class="genre-option" data-genre="Family">
+                        Family
+                    </button>
+        
+                    <button type="button" class="genre-option" data-genre="Fantasy">
+                        Fantasy
+                    </button>
+        
+                    <button type="button" class="genre-option" data-genre="Film Noir">
+                        Film Noir
+                    </button>
+        
+                    <button type="button" class="genre-option" data-genre="Horror">
+                        Horror
+                    </button>
+        
+                    <button type="button" class="genre-option" data-genre="Sci-Fi">
+                        Sci-Fi
+                    </button>
+        
+                    <button type="button" class="genre-option" data-genre="Romance">
+                        Romance
+                    </button>
+        
+                </div>
+        
+            </div>
+        </section>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    
+    <section class="details-section container">
+        <div id="detailsStatus" class="status-message">
+            Loading movie...
+        </div>
+        <div id="movieDetails" class="movie-details hidden"></div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>© 2025 by Karyar Studio</p>
+</footer>
+
+
+<script src="js/api.js"></script>
+<script src="js/details.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
