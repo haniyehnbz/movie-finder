@@ -39,7 +39,7 @@ function displayMovieDetails(movie) {
               .split(",")
               .map((actor) => actor.trim())
               .filter(Boolean)
-              .slice(0, 6) : [];
+              .slice(0, 4) : [];
 
     const genreTags = genres
         .map((g) => {
